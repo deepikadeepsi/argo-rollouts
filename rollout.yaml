@@ -3,12 +3,15 @@ kind: Rollout
 metadata:
   name: rollouts-demo
 spec:
-  replicas: 5
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rollouts-demo
   strategy:
     canary:
       steps:
         - setWeight: 20
-        - pause: 
+        - pause:
             duration: 10s
         - setWeight: 40
         - pause:
