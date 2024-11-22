@@ -12,10 +12,10 @@ spec:
       steps:
         - setWeight: 20
         - pause:
-            duration: 1m
+            duration: 2m
         - setWeight: 40
         - pause:
-            duration: 1m
+            duration: 2m
         - setWeight: 60
         - pause:
             duration: 10s
@@ -30,6 +30,6 @@ spec:
     spec:
       containers:
         - name: rollouts-demo
-          image: argoproj/rollouts-demo:yellow
+          image: argoproj/rollouts-demo:green
           ports:
             - containerPort: 8080
